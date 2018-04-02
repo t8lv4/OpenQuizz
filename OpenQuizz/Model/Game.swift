@@ -7,7 +7,6 @@
 //
 
 import Foundation
-import AVFoundation
 
 class Game {
     var score = 0

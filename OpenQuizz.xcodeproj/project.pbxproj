@@ -19,6 +19,7 @@
 		90DCF78C206B840B00E4DA44 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 90DCF78B206B840B00E4DA44 /* Assets.xcassets */; };
 		90DCF78F206B840B00E4DA44 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 90DCF78D206B840B00E4DA44 /* LaunchScreen.storyboard */; };
 		90DCF797206BA50400E4DA44 /* Balham.otf in Resources */ = {isa = PBXBuildFile; fileRef = 90DCF796206BA50400E4DA44 /* Balham.otf */; };
+		90E455372072990F00D8E757 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90E455362072990F00D8E757 /* AVFoundation.framework */; };
 		90F750FF20723D4100328A19 /* PlaySound.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F750FE20723D4100328A19 /* PlaySound.swift */; };
 /* End PBXBuildFile section */
 
@@ -37,6 +38,7 @@
 		90DCF78E206B840B00E4DA44 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		90DCF790206B840B00E4DA44 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		90DCF796206BA50400E4DA44 /* Balham.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Balham.otf; sourceTree = "<group>"; };
+		90E455362072990F00D8E757 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		90F750FE20723D4100328A19 /* PlaySound.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaySound.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -45,6 +47,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				90E455372072990F00D8E757 /* AVFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -57,6 +60,7 @@
 				90DCF783206B840B00E4DA44 /* OpenQuizz */,
 				90DCF79C206BADBC00E4DA44 /* SupportingFiles */,
 				90DCF782206B840A00E4DA44 /* Products */,
+				90E455352072990F00D8E757 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -118,6 +122,14 @@
 				90DCF78B206B840B00E4DA44 /* Assets.xcassets */,
 			);
 			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		90E455352072990F00D8E757 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				90E455362072990F00D8E757 /* AVFoundation.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
