@@ -11,12 +11,15 @@
 		900484CA206CD657005A1CF4 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 900484C9206CD657005A1CF4 /* Game.swift */; };
 		900484CC206CD75A005A1CF4 /* QuestionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 900484CB206CD75A005A1CF4 /* QuestionManager.swift */; };
 		9032AD51206E22B800C5D683 /* QuestionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9032AD50206E22B800C5D683 /* QuestionView.swift */; };
+		9076B1CB2072768B008664FF /* chord.wav in Resources */ = {isa = PBXBuildFile; fileRef = 9076B1C92072768B008664FF /* chord.wav */; };
+		9076B1CC2072768B008664FF /* bleep.wav in Resources */ = {isa = PBXBuildFile; fileRef = 9076B1CA2072768B008664FF /* bleep.wav */; };
 		90DCF785206B840B00E4DA44 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90DCF784206B840B00E4DA44 /* AppDelegate.swift */; };
 		90DCF787206B840B00E4DA44 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90DCF786206B840B00E4DA44 /* ViewController.swift */; };
 		90DCF78A206B840B00E4DA44 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 90DCF788206B840B00E4DA44 /* Main.storyboard */; };
 		90DCF78C206B840B00E4DA44 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 90DCF78B206B840B00E4DA44 /* Assets.xcassets */; };
 		90DCF78F206B840B00E4DA44 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 90DCF78D206B840B00E4DA44 /* LaunchScreen.storyboard */; };
 		90DCF797206BA50400E4DA44 /* Balham.otf in Resources */ = {isa = PBXBuildFile; fileRef = 90DCF796206BA50400E4DA44 /* Balham.otf */; };
+		90F750FF20723D4100328A19 /* PlaySound.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F750FE20723D4100328A19 /* PlaySound.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,8 @@
 		900484C9206CD657005A1CF4 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		900484CB206CD75A005A1CF4 /* QuestionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionManager.swift; sourceTree = "<group>"; };
 		9032AD50206E22B800C5D683 /* QuestionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionView.swift; sourceTree = "<group>"; };
+		9076B1C92072768B008664FF /* chord.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = chord.wav; sourceTree = "<group>"; };
+		9076B1CA2072768B008664FF /* bleep.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = bleep.wav; sourceTree = "<group>"; };
 		90DCF781206B840A00E4DA44 /* OpenQuizz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OpenQuizz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		90DCF784206B840B00E4DA44 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		90DCF786206B840B00E4DA44 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -32,6 +37,7 @@
 		90DCF78E206B840B00E4DA44 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		90DCF790206B840B00E4DA44 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		90DCF796206BA50400E4DA44 /* Balham.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Balham.otf; sourceTree = "<group>"; };
+		90F750FE20723D4100328A19 /* PlaySound.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaySound.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +84,7 @@
 			children = (
 				900484C7206CC281005A1CF4 /* Question.swift */,
 				900484C9206CD657005A1CF4 /* Game.swift */,
+				90F750FE20723D4100328A19 /* PlaySound.swift */,
 				900484CB206CD75A005A1CF4 /* QuestionManager.swift */,
 			);
 			path = Model;
@@ -104,6 +111,8 @@
 			isa = PBXGroup;
 			children = (
 				90DCF784206B840B00E4DA44 /* AppDelegate.swift */,
+				9076B1CA2072768B008664FF /* bleep.wav */,
+				9076B1C92072768B008664FF /* chord.wav */,
 				90DCF78D206B840B00E4DA44 /* LaunchScreen.storyboard */,
 				90DCF796206BA50400E4DA44 /* Balham.otf */,
 				90DCF78B206B840B00E4DA44 /* Assets.xcassets */,
@@ -138,7 +147,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0920;
-				LastUpgradeCheck = 0920;
+				LastUpgradeCheck = 0930;
 				ORGANIZATIONNAME = Morgan;
 				TargetAttributes = {
 					90DCF780206B840A00E4DA44 = {
@@ -171,9 +180,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				90DCF78F206B840B00E4DA44 /* LaunchScreen.storyboard in Resources */,
+				9076B1CB2072768B008664FF /* chord.wav in Resources */,
 				90DCF78C206B840B00E4DA44 /* Assets.xcassets in Resources */,
 				90DCF797206BA50400E4DA44 /* Balham.otf in Resources */,
 				90DCF78A206B840B00E4DA44 /* Main.storyboard in Resources */,
+				9076B1CC2072768B008664FF /* bleep.wav in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -185,6 +196,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				900484C8206CC281005A1CF4 /* Question.swift in Sources */,
+				90F750FF20723D4100328A19 /* PlaySound.swift in Sources */,
 				90DCF787206B840B00E4DA44 /* ViewController.swift in Sources */,
 				90DCF785206B840B00E4DA44 /* AppDelegate.swift in Sources */,
 				900484CC206CD75A005A1CF4 /* QuestionManager.swift in Sources */,
@@ -229,6 +241,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -236,6 +249,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -286,6 +300,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -293,6 +308,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;

@@ -7,10 +7,11 @@
 //
 
 import Foundation
-
+import AVFoundation
 
 class Game {
     var score = 0
+    var soundFile = PlaySound()
     
     private var questions = [Question]()
     private var currentIndex = 0
@@ -42,6 +43,7 @@ class Game {
     
     func answerCurrentQuestion(with answer: Bool) {
         if (currentQuestion.isCorrect && answer) || (!currentQuestion.isCorrect && !answer) {
+            soundFile.playSound()
             score += 1
         }
         goToNextQuestion()
