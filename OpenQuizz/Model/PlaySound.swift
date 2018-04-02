@@ -11,19 +11,29 @@ import AVFoundation
 
 class PlaySound {
     
-    var player = AVAudioPlayer()
+    var bleep = AVAudioPlayer()
     let bleepPath = Bundle.main.path(forResource: "bleep", ofType: "wav")
     
-    func playSound() {
+    var chord = AVAudioPlayer()
+    let chordPath = Bundle.main.path(forResource: "chord", ofType: "wav")
+    
+    func playBleep() {
         do {
-            try player = AVAudioPlayer(contentsOf: URL(fileURLWithPath: bleepPath!))
+            try bleep = AVAudioPlayer(contentsOf: URL(fileURLWithPath: bleepPath!))
         } catch {
-            print("Could not load file")
+            print("Could not locate file")
         }
         
-        player.play()
+        bleep.play()
+    }
+    
+    func playChord() {
+        do {
+            try chord = AVAudioPlayer(contentsOf: URL(fileURLWithPath: chordPath!))
+        } catch {
+            print("Could not locate file")
+        }
+        
+        chord.play()
     }
 }
-
-
-

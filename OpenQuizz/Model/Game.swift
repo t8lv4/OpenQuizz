@@ -38,12 +38,13 @@ class Game {
             let name = Notification.Name(rawValue: "QuestionsLoaded")
             let notification = Notification(name: name)
             NotificationCenter.default.post(notification)
+            self.soundFile.playChord()
         }
     }
     
     func answerCurrentQuestion(with answer: Bool) {
         if (currentQuestion.isCorrect && answer) || (!currentQuestion.isCorrect && !answer) {
-            soundFile.playSound()
+            soundFile.playBleep()
             score += 1
         }
         goToNextQuestion()
