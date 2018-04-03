@@ -21,7 +21,7 @@ class PlaySound {
         do {
             try bleep = AVAudioPlayer(contentsOf: URL(fileURLWithPath: bleepPath!))
         } catch {
-            print("Could not locate file")
+            print("Unexpected error: \(error).")
         }
         
         bleep.play()
@@ -31,7 +31,7 @@ class PlaySound {
         do {
             try chord = AVAudioPlayer(contentsOf: URL(fileURLWithPath: chordPath!))
         } catch {
-            print("Could not locate file")
+            print("Unexpected error: \(error).")
         }
         
         chord.play()
