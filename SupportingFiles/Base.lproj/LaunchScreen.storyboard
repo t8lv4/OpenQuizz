@@ -1,35 +1,94 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
-    <device id="retina4_7" orientation="portrait">
-        <adaptation id="fullscreen"/>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+    <device id="ipad9_7" orientation="landscape">
+        <adaptation id="splitview2_3"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Balham.otf">
+            <string>Balham</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="EHf-IW-A2E">
             <objects>
                 <viewController id="01J-lp-oVM" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="694" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="Loading" translatesAutoresizingMaskIntoConstraints="NO" id="lEA-r6-Yb2">
-                                <rect key="frame" x="67" y="188" width="241" height="290"/>
-                                <autoresizingMask key="autoresizingMask"/>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" image="Loading" translatesAutoresizingMaskIntoConstraints="NO" id="lEA-r6-Yb2">
+                                <rect key="frame" x="226.5" y="239" width="241" height="290"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="241" id="9xQ-tI-iSc"/>
+                                    <constraint firstAttribute="width" secondItem="lEA-r6-Yb2" secondAttribute="height" multiplier="241:290" id="ZwM-rc-hZ0"/>
+                                </constraints>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="iPad Version" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fs3-V3-rVb">
+                                <rect key="frame" x="217" y="708" width="260" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="211" id="9gF-EQ-skD">
+                                        <variation key="heightClass=regular-widthClass=regular" constant="260"/>
+                                    </constraint>
+                                    <constraint firstAttribute="width" secondItem="fs3-V3-rVb" secondAttribute="height" multiplier="211:40" id="zWe-YI-pFy">
+                                        <variation key="heightClass=regular-widthClass=regular" constant="49"/>
+                                    </constraint>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Balham" family="Balham" pointSize="40"/>
+                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="9gF-EQ-skD"/>
+                                        <exclude reference="zWe-YI-pFy"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <mask key="constraints">
+                                        <include reference="9gF-EQ-skD"/>
+                                        <include reference="zWe-YI-pFy"/>
+                                    </mask>
+                                </variation>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.35849699378013611" green="0.41746842861175537" blue="0.50225341320037842" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="lEA-r6-Yb2" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="GRJ-YJ-qeS"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="fs3-V3-rVb" secondAttribute="bottom" constant="20" id="SlF-We-tcq"/>
+                            <constraint firstItem="lEA-r6-Yb2" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="coe-PJ-Q4a"/>
+                            <constraint firstItem="fs3-V3-rVb" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="ea7-VH-dwt"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="fs3-V3-rVb"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="SlF-We-tcq"/>
+                                <exclude reference="ea7-VH-dwt"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=regular">
+                            <mask key="subviews">
+                                <include reference="fs3-V3-rVb"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="SlF-We-tcq"/>
+                                <include reference="ea7-VH-dwt"/>
+                            </mask>
+                        </variation>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="53" y="375"/>
+            <point key="canvasLocation" x="51.873198847262245" y="374.21875"/>
         </scene>
     </scenes>
     <resources>
